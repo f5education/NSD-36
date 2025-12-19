@@ -5,9 +5,9 @@ PS4='+$(date +"%T.%3N"): '
 # update lab environment
 
 # pull files from github
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GITHUB/$COURSE_ID/main/INTRO/juice.conf
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GITHUB/$COURSE_ID/main/INTRO/hosts_jump
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GITHUB/$COURSE_ID/main/INTRO/hosts_nginx
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/INTRO/juice.conf
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/INTRO/hosts_jump
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/INTRO/hosts_nginx
 
 # prep directories on nginx and copy files to nginx
     sudo ssh nginx mkdir /etc/nginx/ssl
