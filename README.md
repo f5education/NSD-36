@@ -1,2 +1,2 @@
-# NSD34
-NGINX Securing Deployments R34 Course Repository
+# NSD-36
+NGINX Securing Deployments R36 Course Repository
