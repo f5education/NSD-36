@@ -4,17 +4,17 @@ PS4='+$(date +"%T.%3N"): '
 
 # update nginx host for the specific lab
 # pull files from github
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/HTTPS/juice.conf
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/HTTPS/juice_SecUp.bak
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/HTTPS/ssl-params.conf
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/INTRO/hosts_jump
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/INTRO/hosts_nginx
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/SCRIPTS/create_certs.sh
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/SCRIPTS/curl_script.sh
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/SCRIPTS/upload.sh
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/HTTPS/juice.conf
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/HTTPS/juice_SecUp.bak
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/HTTPS/ssl-params.conf
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/INTRO/hosts_jump
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/INTRO/hosts_nginx
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/SCRIPTS/create_certs.sh
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/SCRIPTS/curl_script.sh
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/SCRIPTS/upload.sh
 
     # IF don't need this backup file then delete it and the scp command below
-        curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/HTTPS/proxy-ssl-params.bak    
+        curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/HTTPS/proxy-ssl-params.bak    
 
 # prepare files on nginx
     sudo ssh nginx rm /etc/nginx/conf.d/default.conf
