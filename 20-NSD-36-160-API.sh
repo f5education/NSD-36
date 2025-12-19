@@ -4,26 +4,26 @@ PS4='+$(date +"%T.%3N"): '
 
 # update lab environment
 # pull files from github, prepare nginx host and copy files to nginx host
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/API/juice.conf    
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/API/api_server.conf
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/API/ssl-params.conf
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/LIMITS/ssl-params-dashboard.conf
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/LIMITS/proxy-ssl-params.conf
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/HTTPS/dhparam.pem
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/INTRO/hosts_jump
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/INTRO/hosts_nginx 
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/API/nginx.conf
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/API/quotes.jwt
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/API/api_secret.jwk
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/API/LeesQuote.jwt
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/API/juice.conf    
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/API/api_server.conf
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/API/ssl-params.conf
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/LIMITS/ssl-params-dashboard.conf
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/LIMITS/proxy-ssl-params.conf
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/HTTPS/dhparam.pem
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/INTRO/hosts_jump
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/INTRO/hosts_nginx 
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/API/nginx.conf
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/API/quotes.jwt
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/API/api_secret.jwk
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/API/LeesQuote.jwt
 
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/CERTS/DASHBOARD/ca-cert-dashboard.crt
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/CERTS/DASHBOARD/www.nginxdashboard.com.crt
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/CERTS/DASHBOARD/www.nginxdashboard.com.key
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/CERTS/DASHBOARD/ca-cert-dashboard.crt
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/CERTS/DASHBOARD/www.nginxdashboard.com.crt
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/CERTS/DASHBOARD/www.nginxdashboard.com.key
 
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/CERTS/ca-cert.crt
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/CERTS/www.nginxtraining.com.crt
-    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/learnf5/$COURSE_ID/main/CERTS/www.nginxtraining.com.key
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/CERTS/ca-cert.crt
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/CERTS/www.nginxtraining.com.crt
+    curl --silent --remote-name-all --output-dir /tmp https://raw.githubusercontent.com/$GHACCT/$COURSE_ID/main/CERTS/www.nginxtraining.com.key
 
         # Create directories on NGINX
     sudo ssh nginx mkdir /etc/nginx/ssl
