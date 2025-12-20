@@ -1,5 +1,8 @@
-# install 30 day nginx one trial licenses from Salesforce 
+# enable debugging 
 set +x
+PS4='+$(date +"%T.%3N"): '
+
+# install 30 day nginx one trial licenses from Salesforce 
 curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token $TOKEN" https://raw.githubusercontent.com/learnf5/eval-reg-keys/main/nginx/nginx-one-eval.{crt,key,jwt}
 echo curl --silent --remote-name-all --output-dir /tmp --header "Authorization: token xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" https://raw.githubusercontent.com/$GITHUB/eval-reg-keys/main/nginx/nginx-one-eval.{crt,key,jwt}
 echo '***' REG KEYS EVENTUALLY NEED TO BE MOVED FROM github.com/learnf5 TO github.com/$GHACCT '***'
